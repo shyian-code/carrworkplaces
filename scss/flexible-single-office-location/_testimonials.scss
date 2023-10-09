@@ -1,0 +1,71 @@
+.testimonial {
+  margin: 80px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__text-wrapper {
+    background-color: $background-four;
+    margin-right: 100px;
+    max-width: 770px;
+  }
+
+  &__text {
+    padding: 40px 60px;
+  }
+
+  &__client-text {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.0125em;
+    line-height: 1.5em;
+    color: $text-one;
+    margin: 0;
+  }
+
+  &__client-name {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  &__client-description {
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+    margin: 0;
+  }
+
+  &__industries {
+    max-width: 370px;
+    padding: 40px 20px 60px 50px;
+    background-color: $background-four;
+  }
+
+  &__industries-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  &__industries-list {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: disc;
+    margin-left: 20px;
+  }
+
+  &__industries-list-item {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    width: 50%;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,106 @@
+.moving-text-section {
+  padding: 50px 0 0 0;
+  text-align: center;
+  margin-bottom: 50px;
+  @media (max-width: $medium-width) {
+    margin-bottom: 25px;
+    padding: 25px 0 0 0;
+  }
+  &__heading-title {
+    font-size: 35px;
+    color: $color-four;
+    text-align: center;
+    @media (max-width: $medium-width) {
+      font-size: 40px;
+    }
+  }
+
+  &__heading-subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+    color: $text-one;
+    text-align: center;
+  }
+
+  &__banner-wrapper {
+    overflow: hidden;
+    position: relative;
+    min-height: 22vh;
+    margin-top: 40px;
+    @include media($tiny) {
+      min-height: 15vh;
+    }
+    @include media($medium) {
+      min-height: 30vh;
+      margin-top: 60px;
+    }
+
+    &--top,
+    &--bottom {
+      display: inline-block;
+      position: absolute;
+      text-transform: capitalize;
+      font-size: 45px;
+      font-weight: 400;
+      white-space: nowrap;
+      line-height: 1;
+      margin: 0;
+      color: $headline;
+      @media (max-width: $small-width) {
+        font-size: 35px;
+      }
+      @include media($medium) {
+        font-size: 60px;
+      }
+    }
+
+    &--top {
+      animation: moveLeft 75s infinite linear;
+      right: 95%;
+    }
+
+    &--bottom {
+      top: 1.8em;
+      animation: moveRight 75s infinite linear;
+      left: 95%;
+
+      @include media($medium) {
+        top: 2em;
+      }
+    }
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+// Background color section
+.moving-text-section.white {
+  background-color: $color-one;
+}
+
+.moving-text-section.orange {
+  background-color: $color-four;
+}
+
+.moving-text-section.beige {
+  background-color: $background-four;
+}

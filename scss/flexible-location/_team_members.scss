@@ -1,0 +1,102 @@
+.team-members {
+  list-style: none;
+  padding: 25px 0;
+
+  display: none;
+  @include media($medium) {
+    padding: 50px 0;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    margin: 0 auto 25px;
+
+    @include media($medium) {
+      font-size: 40px;
+      margin: 0 auto 40px;
+    }
+
+    h2 {
+      color: $text-black;
+    }
+  }
+
+  &__list {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    @include media($small) {
+      flex-direction: row;
+    }
+    @include media($medium) {
+      flex-direction: row;
+      gap: 35px;
+    }
+  }
+
+  &__list-item {
+    position: relative;
+    height: 320px;
+    @include media($medium) {
+      height: 100%;
+    }
+    @include media($medium) {
+      height: 100%;
+    }
+  }
+
+  &__person-photo {
+    max-width: 100%;
+    object-fit: cover;
+    object-position: top;
+    height: inherit;
+  }
+
+  &__list-item-overlay {
+    display: block;
+    position: absolute;
+    padding: 40px 20px 0px;
+    top: 70%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: linear-gradient(0deg, rgba(252,97,43,1) 4%, rgba(255, 255, 255, 0) 100%);
+
+    @include media($medium) {
+      padding: 70px 20px 0px;
+      top: 75%;
+    }
+  }
+
+  &__person-position {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.64);
+  }
+
+  &__person-name {
+    font-size: 24px;
+    font-weight: 600;
+    color: $color-one;
+    margin-top: 5px;
+  }
+}
+
+//Background color section
+
+.team-member-slider.white {
+  background-color: $color-one;
+}
+
+.team-member-slider.orange {
+  background-color: $color-four;
+}
+
+.team-member-slider.beige {
+  background-color: $background-four;
+}

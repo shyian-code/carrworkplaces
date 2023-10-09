@@ -1,0 +1,37 @@
+.full-size-cta {
+  height: 60vh;
+  position: relative;
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    transform: translate(0px, -50%);
+    max-width: 600px;
+
+    @include media($medium) {
+      //max-width: 27%;
+    }
+
+    h2 {
+      color: $color-one;
+      font-weight: 400;
+      line-height: 50px;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.71%);
+
+      b {
+        font-weight: 700;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      color: $color-one;
+    }
+
+    .button {
+      margin-top: 2rem;
+    }
+  }
+}
+
+//Background color section

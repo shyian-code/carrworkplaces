@@ -1,0 +1,856 @@
+/* Content Modules
+--------------------- */
+.content-module {
+
+  &.beige {
+    background-color: $background-four;
+  }
+}
+
+/* Editor
+--------------------- */
+.editor {
+  margin-top: $margin-medium;
+  margin-bottom: $margin-medium;
+  position: relative;
+  transition: 1s linear;
+  max-height: 100%;
+
+  a {
+    display: inline;
+    text-decoration: none;
+    color: $color-four;
+  }
+
+  p {
+    margin: 30px 0;
+  }
+
+  .button.orange {
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+    color: $color-one;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $color-four;
+    }
+  }
+
+  .button.purple {
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: auto;
+    padding: 12px 20px;
+    color: $color-one;
+
+    &:hover {
+      color: $color-five;
+      font-weight: 700;
+    }
+  }
+
+  ul, ol {
+    padding-left: 18px;
+    margin: 30px 0;
+
+    li {
+      margin: 20px 0;
+    }
+  }
+
+  .orange-mark-list {
+    padding: 0 0 0 40px;
+    margin: 15px 0 0;
+    list-style: none;
+
+    @include media($medium) {
+      margin: 15px 0 25px;
+    }
+    li {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 30px;
+      margin-bottom: 25px;
+      position: relative;
+      &:before {
+        content: url(../img/orange-check-mark.svg);
+        position: absolute;
+        left: -42px;
+        top: 3px;
+      }
+    }
+  }
+
+  .purple-mark-list {
+    padding-left: 40px;
+    margin: 15px 0 0;
+    list-style: none;
+
+    @include media($medium) {
+      margin: 15px 0 25px;
+    }
+    li {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 30px;
+      margin-bottom: 15px;
+      position: relative;
+
+      &:before {
+        content: url(../img/purple-checkmark.svg);
+        position: absolute;
+        left: -42px;
+        top: 3px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.hide-content {
+    max-height: 250px;
+    overflow: hidden;
+  }
+}
+
+/* Cards
+--------------------- */
+.cards {
+  margin-top: $margin-medium;
+  margin-bottom: $margin-large;
+
+  .section-header {
+    margin-bottom: $margin-medium;
+  }
+
+  .inner-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -12.5px;
+  }
+
+  h3 {
+    margin: 0 0 16px;
+
+    a {
+      color: $text-one;
+      text-decoration: none;
+    }
+  }
+
+  h5 {
+    margin: 0 0 16px;
+  }
+
+
+  p {
+    line-height: 26px;
+    color: #888;
+  }
+
+  .button {
+    margin-top: 16px;
+  }
+
+  .standard {
+    margin-top: 16px;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: $margin-small;
+    padding: 0 12.5px;
+    display: flex;
+    @include media($xsmall) {
+      width: 50%;
+    }
+    @include media($medium) {
+      width: 33.333%;
+    }
+
+    .card-inner {
+      width: 100%;
+      background-color: #F6F6F6;
+      text-align: center;
+    }
+
+    .card-lower {
+      padding: $pad 40px 35px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+/* Image Panel
+--------------------- */
+.image-panel {
+  width: 100%;
+
+  .inner-wrapper {
+    display: flex;
+    align-items: flex-end;
+    min-height: 382px;
+    padding: $pad 20px 0;
+    @include media($small) {
+      align-items: center;
+      padding: $pad 20px;
+    }
+    @include media($large) {
+      padding: $pad 100px;
+
+    }
+  }
+
+  h2 {
+    margin: 0 0 16px;
+  }
+
+  h5 {
+    margin: 0 0 16px;
+  }
+
+  p {
+    line-height: 26px;
+  }
+
+  img {
+    position: absolute;
+  }
+
+  .button {
+    margin-top: 16px;
+  }
+
+  .standard {
+    margin-top: 16px;
+  }
+
+  .card {
+    max-width: 418px;
+    width: 100%;
+    padding: $pad;
+    background-color: $background-one;
+    text-align: center;
+  }
+
+  &.layout-one {
+    .inner-wrapper {
+      flex-direction: row;
+    }
+  }
+
+  &.layout-two {
+    .inner-wrapper {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+/* List Panel
+--------------------- */
+.list-panel {
+  //background-color: $background-four;
+  //margin-top: $margin-medium;
+  //margin-bottom: $margin-medium;
+  //padding: 30px 35px;
+
+  .section-header {
+    text-align: left;
+
+    h2 {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    img {
+      width: $margin-large;
+      height: auto;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    //padding-left: $pad;
+
+    //li {
+    //	width: 100%;
+    //	margin-top: $margin-medium;
+    //	padding-right: 0px;
+    //	list-style-image: url('../img/icon-tick-small.svg');
+    //	@include media($tiny) {
+    //		padding-right: 60px;
+    //		width: 50%;
+    //	}
+    //}
+  }
+
+  //.buttons {
+  //	text-align: right;
+  //	margin-top: $margin-small;
+  //}
+
+  //.button, .button_two {
+  //	margin-top: $margin-small;
+  //	@include media($tiny) {
+  //		margin-left: 40px;
+  //	}
+  //}
+}
+
+/* Map Panel
+--------------------- */
+.map-panel {
+  margin-top: $margin-medium;
+  margin-bottom: 100px;
+
+  &.beige {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 50px 0 100px;
+  }
+
+  .section-header {
+    margin-bottom: $margin-medium;
+  }
+
+  .address-list,
+  .wpgmza_basic_list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
+
+  .address,
+  .wpgmaps_blist_row,
+  .wpgmza_marker_list_class[data-wpgmza-php-class="WPGMZA\\MarkerListing\\BasicList"] {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: $margin-small;
+    border-bottom: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @include media($tiny) {
+      width: 50%;
+    }
+    @include media($small) {
+      width: 33.333%;
+      margin-top: $margin-medium;
+    }
+    @include media($mlarge) {
+      width: 25%;
+    }
+
+    &:hover {
+      background: transparent;
+    }
+  }
+
+
+  // wp google maps plugin
+  .owl-item {
+    padding: 10px;
+  }
+
+  .wpgmaps_mlist_row {
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  .wpgmza_carousel_odd,
+  .wpgmza_carousel_even {
+    background-color: $background-six !important;
+  }
+}
+
+/* Content Row Panel
+--------------------- */
+.content-row-panel {
+  width: 100%;
+  margin-top: $margin-medium;
+  margin-bottom: $margin-medium;
+
+  .inner-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .block {
+    width: 100%;
+    @include media($medium) {
+      width: 50%;
+    }
+  }
+
+  h2 {
+    margin: 0 0 40px;
+  }
+
+  ul {
+    padding-left: 18px;
+  }
+
+  p {
+    margin: 40px 0;
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  &.layout-one {
+    .inner-wrapper {
+      flex-direction: row;
+    }
+
+    .block-one {
+
+      @include media($medium) {
+        padding-right: $pad $margin-small;
+      }
+    }
+  }
+
+  &.layout-two {
+    .inner-wrapper {
+      flex-direction: row-reverse;
+    }
+
+    .block-one {
+      @include media($medium) {
+        padding-left: $pad;
+      }
+    }
+  }
+
+  &.beige {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 50px 0 50px;
+  }
+
+  &.slide-show {
+    h1, h2, h3, h4, h5 h6 {
+      margin-top: 40px;
+      margin-bottom: 20px;
+
+      &:first-child {
+        margin-top: 0;
+
+      }
+    }
+  }
+
+  &.image {
+    .block-one {
+      width: 100%;
+      @include media($medium) {
+        width: 60%;
+        padding-right: 50px;
+      }
+    }
+
+    .block-two {
+      width: 100%;
+      @include media($medium) {
+        width: 40%;
+      }
+    }
+  }
+
+  &.video {
+    .block-one {
+      width: 100%;
+      @include media($medium) {
+        width: 60%;
+        padding-right: 50px;
+      }
+    }
+
+    .block-two {
+      width: 100%;
+      padding-top: 56%;
+      position: relative;
+      @include media($medium) {
+        padding-top: 22.5%;
+        width: 40%;
+      }
+
+      iframe {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+/* Testimonial / Industries Panel
+--------------------- */
+.testimonial-industries {
+
+  h1, h2, h3, h4, h5, h6, p, ul, ol {
+    color: $text-three;
+  }
+
+  ul, ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  blockquote {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @extend .l-wrapper;
+  }
+
+  .industry-list {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @extend .l-wrapper;
+  }
+
+  .testimonial {
+    background-color: #7E8BAD;
+  }
+
+  .industries {
+    background-color: $background-three;
+  }
+
+  &.blocks {
+    display: flex;
+    flex-wrap: wrap;
+
+
+    .block {
+      width: 100%;
+      @include media($mlarge) {
+        width: 50%;
+      }
+    }
+
+    blockquote {
+      width: 100%;
+      padding: 50px 20px;
+      @include media($mlarge) {
+        padding: 50px 50px 50px 20px;
+        float: right;
+        max-width: 570px;
+      }
+
+      p {
+        margin-bottom: 20px;
+        line-height: 30px;
+      }
+    }
+
+    .industry-list {
+      width: 100%;
+      padding: 50px 20px;
+      @include media($mlarge) {
+        max-width: 570px;
+        width: 100%;
+        padding: 50px 20px 50px 50px;
+        float: left;
+      }
+
+      h4 {
+        font-weight: 700;
+      }
+
+
+      ul, ol {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+          width: 100%;
+          margin-top: 20px;
+          padding-right: 20px;
+          @include media($medium) {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* Feature Panel
+--------------------- */
+.feature-panel {
+  margin-top: $margin-small;
+  margin-bottom: $margin-large;
+
+  .inner-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+
+    @include media($small) {
+      margin: 0 -20px;
+    }
+  }
+
+  .feature {
+    width: 100%;
+    margin-top: $margin-medium;
+    @include media($small) {
+      padding-left: 30px;
+      padding-right: 30px;
+      width: 33.333%;
+    }
+  }
+
+  h2 {
+    margin: 0 0 40px;
+  }
+
+  p {
+    line-height: 30px;
+  }
+}
+
+/* Team Member Panel
+--------------------- */
+.team-member-panel {
+  background-color: $background-four;
+  padding: 50px 0;
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+
+  .inner-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  figure {
+    max-width: 150px;
+    margin: 0 auto 20px;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+    }
+  }
+
+  .bio {
+    margin-top: $margin-medium;
+    width: 100%;
+    @include media($xsmall) {
+      width: 50%;
+      padding: 12.5px;
+    }
+    @include media($small) {
+      width: 33.333%;
+    }
+  }
+
+  .button {
+    margin-top: 40px;
+  }
+}
+
+
+.text-row-panel {
+  .inner-background {
+    .block-two {
+      background-color: $background-four;
+    }
+
+  //  position: relative;
+  //  &:after {
+  //    position: absolute;
+  //    background-color: $background-four;
+  //    content: '';
+  //    width: 100%;
+  //    right: 0;
+  //    height: 50%;
+  //    bottom: 0;
+  //    z-index: 0;
+  //    @include media($medium) {
+  //      position: absolute;
+  //      background-color: $background-four;
+  //      content: '';
+  //      width: 50%;
+  //      right: 0;
+  //      height: 100%;
+  //      top: 0;
+  //      border-bottom: 0;
+  //      z-index: 0;
+  //    }
+  //  }
+  }
+
+  margin-top: $margin-medium;
+  margin-bottom: $margin-medium;
+
+  .inner-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .block {
+    width: 100%;
+    @include media($small) {
+      width: 50%;
+    }
+  }
+
+  .block-one {
+    padding: 40px 0px 40px 0;
+
+    @include media($small) {
+      padding: 40px 50px 40px 0;
+    }
+
+    .button {
+      margin-top: $margin-small;
+      display: block;
+      font-size: 17px;
+      font-weight: 700;
+      text-decoration: none;
+      background: $color-four;
+
+      color: $color-one;
+      text-transform: uppercase;
+
+      @include media($medium) {
+        max-width: 300px;
+      }
+
+      &:hover {
+        color: $color-four;
+      }
+    }
+
+    p {
+      a {
+        display: inline;
+        color: $color-four;
+      }
+
+      &.first-letter {
+        &:first-letter {
+          font-size: 32px;
+          color: $text-one;
+
+          @include media($medium) {
+            font-size: 48px
+          }
+        }
+      }
+    }
+  }
+
+  .block-two {
+
+    padding: 40px 40px;
+    z-index: 10;
+    //background-color: $background-four;
+    @include media($small) {
+      padding: 40px 50px;
+    }
+
+    .gform_body ul {
+      padding-left: 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .gform_body {
+      li {
+        margin: 0;
+      }
+    }
+
+    li {
+      margin: 20px 0;
+    }
+
+    .orange-mark-list {
+      padding: 0 0 0 40px;
+      margin: 15px 0 0;
+      list-style: none;
+
+      @include media($medium) {
+        margin: 15px 0 25px;
+      }
+      li {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 25px;
+        position: relative;
+        &:before {
+          content: url(../img/orange-check-mark.svg);
+          position: absolute;
+          left: -42px;
+          top: 3px;
+        }
+      }
+    }
+
+    .purple-mark-list {
+      padding-left: 40px;
+      margin: 15px 0 0;
+      list-style: none;
+
+      @include media($medium) {
+        margin: 15px 0 25px;
+      }
+      li {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 15px;
+        position: relative;
+
+        &:before {
+          content: url(../img/purple-checkmark.svg);
+          position: absolute;
+          left: -42px;
+          top: 3px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

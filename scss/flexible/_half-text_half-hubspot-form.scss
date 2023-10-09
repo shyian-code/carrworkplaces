@@ -1,0 +1,368 @@
+.half-text_half-hubspot_form {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 25px 25px;
+  @include media($small) {
+    flex-direction: row;
+  }
+  @include media($medium) {
+    flex-direction: row;
+    padding: 25px 100px 100px;
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    //padding: 35px 15px;
+  }
+
+  .block-one {
+    width: 100%;
+    @include media($small) {
+      width: 50%;
+    }
+    @include media($medium) {
+      width: 50%;
+    }
+
+    .text-wrapper {
+      @include media($small) {
+        padding-left: 25px;
+      }
+      @include media($medium) {
+        padding-right: 100px;
+      }
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: top;
+      max-height: 40vh;
+      @include media($small) {
+        max-height: 50vh;
+      }
+      @include media($medium) {
+        max-height: 100%;
+        height: 100%;
+      }
+    }
+
+    h2 {
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 43px;
+      margin-bottom: 1.5rem;
+      text-transform: capitalize;
+
+      @include media($medium) {
+        font-size: 40px;
+        line-height: 50px;
+      }
+
+      a {
+        display: inline;
+        font: inherit;
+        color: $color-four;
+
+        &:hover {
+          text-decoration: underline;
+          color: $color-five;
+        }
+      }
+    }
+
+    h4 {
+      font-size: 24px;
+      font-weight: 400;
+      text-transform: capitalize;
+      line-height: 1.2em;
+      margin-bottom: 2rem;
+      @media (max-width: $medium-width) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    h6 {
+      font-weight: 600;
+      font-size: 18px;
+      text-transform: capitalize;
+    }
+
+    p {
+      font-family: $font-two;
+      font-size: 16px;
+      font-weight: 400;
+      color: #666666;
+      margin: 0.5em auto 5px;
+      @media (max-width: $medium-width) {
+        margin: 15px auto 15px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        font-size: 16px;
+        font-weight: inherit;
+        color: $color-four;
+        display: inline;
+        text-decoration: none;
+        text-transform: capitalize;
+
+        &:hover {
+          color: $color-five;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    ul {
+      margin: 0 0 10px;
+    }
+
+    .gform_body.gform-body {
+      img {
+        height: auto;
+        width: auto;
+      }
+    }
+  }
+
+  .image-left {
+    order: 1;
+
+    @include media($medium) {
+      order: 2;
+    }
+  }
+
+  .text-right {
+    order: 2;
+
+    @include media($medium) {
+      order: 1;
+    }
+  }
+
+  .block-two.text-right > .text-wrapper {
+    @include media($small) {
+      padding-left: 25px;
+    }
+    @include media($medium) {
+      padding-right: 100px;
+    }
+  }
+
+  .block-two.text-left > .text-wrapper {
+    @include media($small) {
+      padding-left: 25px;
+    }
+    @include media($medium) {
+      padding-left: 50px;
+    }
+  }
+
+  .block-two {
+    width: 100%;
+    justify-self: center;
+    margin-top: 40px;
+    @include media($small) {
+      width: 50%;
+    }
+    @include media($medium) {
+      width: 50%;
+      margin-top: 0;
+    }
+
+    .form-wrapper {
+      .hbspt-form {
+        .hs-submit > .actions {
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .text-wrapper {
+    margin-bottom: 30px;
+    text-align: left;
+
+    @include media($medium) {
+      //position: relative;
+      //top: 50%;
+      //transform: translateY(-50%);
+      margin-bottom: 0;
+      text-align: left;
+      padding-right: 50px;
+    }
+
+    a {
+      display: inline;
+      font: inherit;
+      color: $color-four;
+
+      &:hover {
+        text-decoration: underline;
+        color: $color-five
+      }
+    }
+
+    .calbar-custom {
+      max-width: 50px;
+      margin-right: 15px;
+    }
+
+    .orange-mark-list {
+      padding: 0 0 0 40px;
+      margin: 20px 0 30px;
+      list-style: none;
+      text-align: left;
+
+      @include media($medium) {
+        padding: 0 0 30px 40px;
+        margin: 40px 0 0;
+      }
+
+      li {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 15px;
+        position: relative;
+
+        @include media($medium) {
+          font-size: 18px;
+          margin-bottom: 25px
+        }
+
+        &:before {
+          content: url(../img/orange-check-mark.svg);
+          position: absolute;
+          left: -42px;
+          top: 3px;
+        }
+      }
+    }
+
+    .purple-mark-list {
+      padding: 0 0 0 40px;
+      margin: 20px auto 0;
+      list-style: none;
+      max-width: 100%;
+      text-align: left;
+
+      @include media($medium) {
+        padding: 0 0 30px 40px;
+        margin: 40px 0 0;
+      }
+
+      li {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 15px;
+        position: relative;
+
+        @include media($medium) {
+          font-size: 18px;
+          margin-bottom: 25px
+        }
+
+        &:before {
+          content: url(../img/purple-checkmark.svg);
+          position: absolute;
+          left: -42px;
+          top: 3px;
+        }
+      }
+    }
+
+    .button.purple {
+      display: inline-block;
+      font-size: 17px;
+      font-weight: 700;
+      color: $color-one;
+      text-transform: uppercase;
+      text-decoration: none;
+      width: auto;
+      padding: 12px 20px;
+      margin-top: 30px;
+
+      &:hover {
+        border: 2px solid $color-five;
+        color: $color-five;
+      }
+
+      @include media($medium) {
+        margin-top: 0;
+      }
+    }
+
+    .button.orange {
+      font-size: 17px;
+      font-weight: 700;
+      text-decoration: none;
+      color: $color-one;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $color-four;
+      }
+    }
+  }
+
+  .white {
+    background-color: $color-one;
+  }
+
+  .beige {
+    background-color: $background-four;
+  }
+}
+
+.half-text_half-hubspot_form.m-0 {
+  margin: 0px auto;
+  @include media($medium) {
+    margin: 0px auto;
+  }
+}
+
+.half-text_half-hubspot_form.mt-50 {
+  margin-top: 25px;
+  @include media($medium) {
+    margin-top: 50px;
+  }
+}
+
+.half-text_half-hubspot_form.mb-50 {
+  margin-bottom: 25px;
+  @include media($medium) {
+    margin-bottom: 50px;
+  }
+}
+
+.half-text_half_form {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 25px;
+  @include media($small) {
+    flex-direction: row;
+  }
+  @include media($medium) {
+    flex-direction: row;
+    padding: 50px 100px;
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    //padding: 35px 15px;
+  }
+}

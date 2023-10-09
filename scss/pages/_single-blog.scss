@@ -1,0 +1,276 @@
+/* Single blog page Styles
+--------------------- */
+
+.content-single {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  @media (max-width: $medium-width) {
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+
+  .show {
+    display: flex !important;
+  }
+
+  .content {
+    h2 {
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: 600;
+    }
+
+    p {
+      a {
+        display: inline-block;
+        transition: .25s linear;
+        font-weight: 600;
+        color: #FC612B;
+        text-decoration: none;
+        text-transform: capitalize;
+        margin-bottom: 15px;
+
+        span {
+          transition: .25s linear;
+          font-weight: 600;
+          color: #FC612B;
+          text-decoration: none;
+          text-transform: capitalize;
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+
+    li {
+      a {
+        transition: .25s linear;
+        font-weight: 600;
+        color: #FC612B;
+        text-decoration: none;
+        text-transform: capitalize;
+        margin-bottom: 10px;
+        display: inline-block;
+
+        span {
+          transition: .25s linear;
+          font-weight: 600;
+          color: #FC612B;
+          text-transform: capitalize;
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    .gform_wrapper .gform_footer {
+      text-align: center;
+    }
+  }
+}
+
+.learn-about-cta {
+  margin: 0;
+
+  p {
+    margin: 0 0 1em 0;
+    @include media($medium) {
+      margin: 1em 0;
+    }
+  }
+}
+
+.more-news {
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  padding: 50px 0px 15px;
+  text-align: center;
+  @include media($medium) {
+    padding: 100px 0px 100px;
+  }
+
+  .inner-wrapper {
+    margin: 0 -12.5px;
+
+    .posts {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      grid-gap: 30px;
+
+      justify-content: space-evenly;
+
+      .card {
+        width: 100%;
+
+        @include media($small) {
+          width: 45%;
+        }
+        @include media($large) {
+          width: 31%;
+        }
+      }
+    }
+  }
+
+  .card-inner {
+    background-color: $background-one;
+  }
+
+  .posts {
+    width: 100%;
+  }
+
+  h2 {
+    margin-bottom: 40px;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+    @media (max-width: $small-width) {
+      font-size: 35px;
+      font-weight: 400;
+      line-height: 1;
+      margin-bottom: 50px;
+    }
+  }
+
+  article {
+    margin: 0 0 40px !important;
+    width: 100%;
+    @include media($xsmall) {
+      width: 33.333%;
+    }
+
+    h2 {
+      margin: 0;
+    }
+  }
+}
+
+.content-single {
+  .single {
+    h2 {
+      font-size: 18px !important;
+
+      span {
+        font-size: 18px !important;
+      }
+    }
+  }
+}
+
+
+//Single page
+.single {
+  .sub-header {
+    color: $text-five;
+  }
+
+  article.article {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    @include media($tiny) {
+      margin-top: 60px;
+      margin-bottom: 100px;
+    }
+
+    .content {
+      width: 100%;
+      @include media($medium) {
+        width: 66.666%;
+      }
+
+      .alignleft {
+        margin: 20px auto;
+        @include media($tiny) {
+          float: left;
+          margin: 0 20px 20px 0;
+        }
+      }
+
+      .alignright {
+        margin: 20px auto;
+        @include media($tiny) {
+          float: right;
+          margin: 0 0 20px 20px;
+        }
+      }
+
+      .aligncenter {
+        margin: 20px auto 20px;
+      }
+
+      .wp-caption-text {
+        text-align: center;
+        display: block;
+        font-size: 14px;
+        color: $text-one;
+        margin: 10px 0 30px;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin: 0 0 30px;
+        @media (max-width: $small-width) {
+          margin-bottom: 15px;
+        }
+        @media (max-width: $medium-width) {
+          margin-bottom: 20px;
+        }
+
+        @include media($small) {
+        }
+        @include media($tiny) {
+        }
+        @include media($medium) {
+        }
+      }
+
+      ul, ol {
+        margin: $margin-small 0;
+
+        li {
+          margin: 0;
+          @media (max-width: $medium-width) {
+            margin: 8px 0;
+          }
+        }
+      }
+
+      blockquote {
+        margin: $margin-small 0;
+        padding: 0;
+        color: $text-five;
+
+        p {
+          font-size: 22px;
+          line-height: 32px;
+          margin-bottom: 20px;
+        }
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .addtoany_share_save_container {
+    border-top: 1px solid $border-one;
+    margin-top: $margin-medium;
+    padding-top: 50px;
+
+    a {
+      padding-left: 0;
+      padding-right: 12px;
+    }
+  }
+}

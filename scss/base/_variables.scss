@@ -1,0 +1,76 @@
+// Colors ------------------------------------------------------------- //
+// -------------------------------------------------------------------- //
+
+// Reusable Colors
+$color-one: #fff; // White
+$color-grey: #8F8F8F; // Grey
+// $color-two: #BDBD2B; // Green
+$color-two: #98c53d; // Green
+$color-three: #6A779D; // Navy blue
+$color-four: #FC612B; // Orange
+$color-five: #22215B; // Purple
+$color-six: #534846; // Brown
+
+// Background Colors
+$background-one: $color-one; // White
+$background-cyan: #F2F6F7; // Cyan
+$background-two: $color-two; // Green
+$background-three: $color-three; // Navy blue
+$background-four: #F2F6F7; // Beige
+$background-five: $color-six; // Brown
+$background-six: $color-five; // Purple
+
+
+// Font Colors
+$text-black: #000;
+$text-one: #333333; // grey
+$text-light-one: #666666; // light grey
+$text-two: #2B2F34; // charcoal grey
+$text-three: $color-one; // white
+$text-four: #9FDBFF; // sky blue
+$text-five: $color-three; // navy blue
+$headline: #8F8F8F;
+
+// Border Colors
+$border-one: #D4D4D4; // Grey
+$border-two: $color-four; // Orange
+
+// Link Colors
+$link-one: $color-three; // Navy blue
+$link-three: $color-one; // White
+
+
+
+// Fonts / Sizes ------------------------------------------------------ //
+// -------------------------------------------------------------------- //
+
+// Fonts */
+$font-one: 'Open Sans', sans-serif; // 300(Light), 400(Book)(DEFAULT), 600(SemiBold), 700(Bold )
+$font-two: 'Roboto', sans-serif;
+
+// Font Sizes
+$base-font-size: 16px !default;
+
+$h1-font-size: 66px;
+$h2-font-size: 40px;
+$h3-font-size: 18px;
+$h4-font-size: 18px;
+$h5-font-size: 16px;
+$h6-font-size: 15px;
+
+//Font Weights
+$h1-font-weight: 74px;
+
+// Spacing ------------------------------------------------------------ //
+// -------------------------------------------------------------------- //
+
+// Line Height
+$base-line-height: 24px;
+
+// Padding
+$pad: 20px;
+
+// margin
+$margin-small: 25px;
+$margin-medium: 50px;
+$margin-large: 75px;

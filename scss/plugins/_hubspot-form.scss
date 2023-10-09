@@ -1,0 +1,68 @@
+/* Gravity Form Styles
+--------------------- */
+#location-hubspot-form {
+  fieldset.form-columns-2 {
+    max-width: 100% !important;
+  }
+
+  fieldset.form-columns-1 {
+    max-width: 100% !important;
+  }
+
+  input[type=text] {
+    background: $background-one;
+    padding: 15px 15px;
+    border: 2px solid #EBEBEB;
+  }
+
+  fieldset.form-columns-1 .hs-input {
+    width: 100%;
+    padding: 15px 15px;
+    border: 2px solid #EBEBEB;
+    background-color: #fff;
+  }
+}
+
+
+.hs-form {
+  margin: 0 auto;
+
+  .hs_email.hs-email {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .hs_submit {
+    text-align: left;
+  }
+
+  input[type=submit] {
+    width: inherit;
+    display: inline-block;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $color-one;
+    max-width: 236px;
+    padding: 15px 60px;
+    text-align: center;
+    background-color: $color-four;
+    border: 2px solid $color-four;
+    margin-top: 25px;
+    transition: 0.25s linear;
+
+    //padding: 12px 25px;
+    font-weight: 700;
+
+    &:hover {
+      border: 2px solid $color-four;
+      background: transparent;
+      color: $color-four;
+    }
+  }
+
+  fieldset.form-columns-1 .hs-input {
+    width: 100%;
+  }
+}
+

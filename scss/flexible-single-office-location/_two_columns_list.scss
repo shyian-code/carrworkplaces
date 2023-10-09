@@ -1,0 +1,83 @@
+
+.columns-lg-list {
+  padding: 40px 0 40px;
+
+  @include media($medium) {
+    padding: 60px 0 80px;
+  }
+
+  &__title {
+    font-weight: 400;
+
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 1000px;
+
+    @include media($medium) {
+      padding-right: 30px;
+      padding-left: 30px;
+      text-align: center;
+      font-size: 21px;
+      margin: 0 0 70px auto;
+      line-height: 33px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    @include media($medium) {
+      column-gap: 94px;
+    }
+  }
+
+  &__list-item {
+    width: 98%;
+
+    @include media($medium) {
+      width: 43%;
+      max-width: 548px;
+    }
+  }
+
+
+  &__item-title {
+    position: relative;
+    font-family: 'Open Sans';
+    padding-left: 55px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 28px;
+
+    &:before {
+      content: url(../img/big-icon-list_mob.svg);
+      position: absolute;
+      left: 0px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @include media($medium) {
+      font-size: 40px;
+      padding-left: 100px;
+      line-height: 44px;
+      letter-spacing: 0.06em;
+      &:before {
+        content: url(../img/big-icon-list.svg);
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__item-description {
+    line-height: 26px;
+    margin-top: 39px;
+  }
+}

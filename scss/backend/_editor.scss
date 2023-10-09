@@ -1,0 +1,112 @@
+body#tinymce {
+	-webkit-font-smoothing: antialiased;
+	color: $text-one;
+	font-family: $font-one;
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+
+	/* Base styles for elements WP editor spits out */
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 0;
+		text-rendering: optimizeLegibility; // Fix the character spacing for headings
+		//font-weight: 300;
+		color: $text-two;
+	}
+
+	h1 {
+		font-size: $h1-font-size;
+		line-height: $h1-font-weight!important;
+		font-weight: 400!important;
+	}
+
+	h2 {
+		font-size: 40px;
+		line-height: 43px;
+		font-weight: 400;
+	}
+
+	h3 {
+		font-size: $h3-font-size;
+		line-height: 32px;
+		font-weight: 600;
+	}
+
+	h4 {
+		font-size: $h4-font-size;
+		line-height: 34px;
+
+		.list-tick {
+			&:before {
+				top: 6px;
+			}
+		}
+	}
+
+	h5 {
+		font-size: $h5-font-size;
+		line-height: 30px;
+	}
+
+	h6 {
+		font-size: $h6-font-size;
+		line-height: 26px;
+	}
+
+	p {
+	    font-size: $base-font-size;
+	    line-height: $base-line-height;
+	    margin: 1em 0;
+	}
+
+	hr {
+		border-top: 1px solid $border-one;
+		margin: $margin-medium 0;
+	}
+
+	a {
+		color: $link-one;
+	}
+
+	blockquote {
+		margin: 0;
+	    padding: 50px;
+
+	    p {
+	    	margin-top: 0px;
+	    }
+	}
+
+	.wp-caption {
+		width: 100% !important;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.wp-caption-text {
+		text-align: center;
+	    display: block;
+	    font-size: 14px;
+	    margin: 10px 0 30px;
+	}
+
+	.gallery {
+		list-style: none;
+		padding: 0;
+
+		li {
+			margin: $margin-medium 0;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}

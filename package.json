@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  },
+  "scripts": {
+    "bs": "browser-sync start --config bs-config.js",
+    "watch": "node-sass --watch scss/theme.scss -o css --source-map true --output-style compressed",
+    "build:css": "node-sass scss -o css --output-style compressed && postcss --use autoprefixer -r css/*.css --no-map",
+    "prefix": "postcss --use autoprefixer -r css/*.css --no-map"
+  }
+}

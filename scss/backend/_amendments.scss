@@ -1,0 +1,20 @@
+/* Hides Settings > General: Membership check box field */ 
+input#users_can_register {
+    display: none;
+}
+
+label[for="users_can_register"] {
+    position: relative;
+    cursor: auto;
+    &:after {
+        display: block;
+        content: 'Feature disabled.'; 
+        color: red;
+        font-style: italic;
+        background: #f1f1f1;
+        height: 30px;
+        width: 200px;
+        position: absolute;
+        top: 0;
+    } 
+}

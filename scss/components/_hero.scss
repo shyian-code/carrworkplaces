@@ -1,0 +1,200 @@
+/* Hero Component
+--------------------- */
+.hero_right-side {
+  &:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    background: linear-gradient(90.21deg, rgba(0, 0, 0, 0.37) 8.99%, rgba(0, 0, 0, 0) 99.81%);
+  }
+
+  .page-title {
+    max-width: 590px;
+  }
+
+}
+
+.hero_card {
+  &:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    background: linear-gradient(90.21deg, rgba(0, 0, 0, 0.67) 0.17%, rgba(0, 0, 0, 0) 99.81%);
+  }
+
+  .page-title {
+    max-width: 590px;
+  }
+}
+
+.hero {
+  position: relative;
+  min-height: 40vh;
+  background-position: 50% 50%;
+  margin-bottom: 50px;
+  @include media($tiny) {
+    min-height: 50vh;
+  }
+
+  @include media($medium) {
+    min-height: 60vh;
+  }
+
+  .bg-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+  }
+
+  .l-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(-90deg, rgba(255, 255, 255, 0.04) 0%, rgba(0, 0, 0, 0.4) 50%);
+    @include media($medium) {
+      background: transparent;
+    }
+  }
+
+  .hero-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    top: 50%;
+    right: 0;
+    transform: translate(0%, -50%);
+    z-index: 2;
+    @include media($medium) {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      top: 50%;
+      right: 0;
+      transform: translate(0%, -50%);
+      z-index: 2;
+    }
+
+    &.right-side {
+      position: absolute;
+      left: 4%;
+
+      @include media($medium) {
+        left: 60%;
+      }
+    }
+
+    a.button {
+      display: inline-block;
+      background-color: $color-four;
+      border: 2px solid $color-four;
+      margin-top: 15px;
+      padding: 10px 15px;
+
+      @include media($medium) {
+        padding: 12px 25px;
+        margin-top: $margin-medium;
+      }
+
+      &:hover {
+        border: 2px solid $color-four;
+        background: transparent;
+      }
+    }
+
+  }
+
+  .page-title {
+    color: $color-one;
+    line-height: 50px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.71);
+
+    @include media($tiny) {
+      line-height: 60px;
+    }
+    @include media($medium) {
+      line-height: 1.2em;
+    }
+  }
+
+  .sub-title {
+    p {
+      font-size: 16px;
+      margin: 10px 0;
+      color: $color-one;
+
+      @include media($tiny) {
+        margin: 15px 0;
+      }
+
+      @include media($medium) {
+        font-size: 18px;
+        max-width: 460px;
+      }
+    }
+  }
+
+  &.card {
+    align-items: flex-end;
+    min-height: 400px;
+
+    @include media($medium) {
+      min-height: 540px;
+    }
+
+    .hero-content {
+      margin-top: 150px;
+      margin-bottom: 0;
+      max-width: 468px;
+      width: 100%;
+      padding: $pad;
+      background-color: $background-one;
+      text-align: center;
+
+      .button {
+        margin-top: $margin-small;
+      }
+
+      .standard {
+        margin-top: $margin-small;
+      }
+    }
+  }
+}
+
+.hero.m-0 {
+  margin-bottom: 0px;
+}
+
+.category {
+  .blog-hero {
+    .inner-wrapper {
+      height: auto;
+    }
+
+    .page-title {
+      color: #fff;
+    }
+  }
+}
+

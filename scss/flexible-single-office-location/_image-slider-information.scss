@@ -1,0 +1,245 @@
+.image-slider-information {
+  list-style: none;
+  padding: 50px 0;
+
+  .l-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    @include media($medium) {
+      flex-direction: row;
+    }
+  }
+
+  .text-block {
+    width: 100%;
+
+    @include media($medium) {
+      width: 45%;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      max-height: 30vh;
+
+      @include media($medium) {
+        max-height: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  //Slick slider custom styles
+
+  .image-slider-information__slider {
+    padding: 0;
+    .slick-prev {
+      background: url(../../img/image-slider_arrow-left.svg) no-repeat center center;
+      left: 2%;
+      padding: 30px 25px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+    }
+
+    .slick-next {
+      background: url(../../img/image-slider_arrow-right.svg) no-repeat center center;
+      right: 2%;
+      padding: 30px 25px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+    }
+  }
+
+  .text-block.text-right {
+    .text-wrapper {
+      padding-bottom: 30px;
+      padding-right: 0;
+      @include media($medium) {
+        padding-left: 50px;
+        padding-bottom: 0;
+        padding-right: 0;
+      }
+
+      .orange-mark-list {
+        padding: 0 0 0 40px;
+        margin: 40px 0 30px;
+        list-style: none;
+        li {
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 30px;
+          margin-bottom: 25px;
+          position: relative;
+          &:before {
+            content: url(../../img/orange-check-mark.svg);
+            position: absolute;
+            left: -42px;
+            top: 3px;
+          }
+        }
+      }
+
+      .purple-mark-list {
+        padding-left: 40px;
+        margin: 15px 0 25px;
+        list-style: none;
+        li {
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 30px;
+          margin-bottom: 15px;
+          position: relative;
+
+          &:before {
+            content: url(../../img/purple-checkmark.svg);
+            position: absolute;
+            left: -42px;
+            top: 3px;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .image-block {
+    width: 100%;
+    @include media($medium) {
+      width: 55%;
+      max-height: 100%;
+      height: 100%;
+    }
+
+    img {
+      width: 100%;
+
+      @include media($medium) {
+        max-height: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .image-block.image-left {
+    .text-wrapper {
+      padding: 30px 0;
+
+      @include media($medium) {
+        padding-left: 50px;
+      }
+    }
+  }
+
+  .text-block {
+    .text-wrapper {
+      padding-bottom: 30px;
+      @include media($medium) {
+        padding-right: 50px;
+      }
+    }
+  }
+
+  .text-block .text-wrapper {
+    h2 {
+      font-size: 40px;
+      line-height: 1.2em;
+      font-weight: 400;
+      margin-bottom: 15px;
+      text-align: left;
+      color: $text-one;
+    }
+
+    h3 {
+      font-size: 18px;
+      line-height: 32px;
+      font-weight: 500;
+    }
+
+    h4 {
+      font-size: 24px;
+      font-weight: 400;
+      color: $headline;
+    }
+
+    p {
+      font-family: $font-two;
+      font-size: 16px;
+      line-height: 1.5em;
+      font-weight: 400;
+      color: #666666;
+      margin-bottom: 25px;
+
+      &.first-letter {
+        &:first-letter {
+          font-size: 48px;
+          color: $text-one;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+    }
+
+    ul {
+      line-height: 1.5em;
+      margin-bottom: 25px;
+      padding-left: 25px;
+
+      li {
+        color: $text-light-one;
+      }
+    }
+
+    .button.purple {
+      display: inline-block;
+      font-size: 17px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: none;
+      width: auto;
+      padding: 12px 20px;
+      color: $color-one;
+
+      &:hover {
+        color: $color-five;
+      }
+    }
+  }
+
+  .image-left {
+    order: 2;
+
+    @include media($medium) {
+      order: 1;
+    }
+  }
+
+  .text-right {
+    order: 1;
+
+    @include media($medium) {
+      order: 2;
+    }
+  }
+}
+
+//Background color section
+
+.two-third-image.white {
+  background-color: $color-one;
+}
+
+.two-third-image.orange {
+  background-color: $color-four;
+}
+
+.two-third-image.beige {
+  background-color: $background-four;
+}

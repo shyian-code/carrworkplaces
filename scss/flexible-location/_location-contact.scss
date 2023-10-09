@@ -1,0 +1,32 @@
+/* Contact Styles
+--------------------- */
+.location-contact {
+  background-color: $background-cyan;
+  padding: 35px 0;
+
+  @include media($medium) {
+    padding: 70px 0;
+  }
+
+  .l-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  &__title {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.25em;
+  }
+
+  &__g-form-block {
+    width: 920px;
+    h2 {
+      font-size: 40px;
+      font-weight: 400;
+    }
+  }
+}
+

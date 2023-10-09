@@ -1,0 +1,314 @@
+.text_and_text {
+  list-style: none;
+  padding: 50px 0;
+
+  .l-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: relative;
+
+    @include media($medium) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  .block-one {
+    width: 100%;
+    margin: 20px 0;
+    padding-right: 30px;
+    //@include media($small) {
+    //  width: 50%;
+    //}
+    @include media($medium) {
+      width: 50%;
+      padding-right: 50px;
+      margin: 45px 0;
+    }
+
+    h2 {
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 35px;
+      @include media($medium){
+        font-size: 40px;
+        line-height: 43px;
+      }
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: top;
+      max-height: 40vh;
+      @include media($small) {
+        max-height: 50vh;
+      }
+      @include media($medium) {
+        max-height: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .left {
+    //order: 2;
+
+    @include media($medium) {
+      order: 1;
+    }
+  }
+
+  .right {
+    //order: 1;
+
+    @include media($medium) {
+      order: 2;
+    }
+  }
+
+  .block-two {
+    width: 100%;
+    //justify-self: center;
+
+    right: 0;
+    display: flex;
+    align-items: center;
+    @include media($small) {
+      //width: 50%;
+      position: absolute;
+    }
+    @include media($medium) {
+      padding: 0;
+      width: 50%;
+      //margin-right: 100px;
+      position: absolute;
+    }
+  }
+
+  .block-two {
+    height: 100%;
+    background-color: $color-four;
+    position: relative;
+    .text-wrapper {
+      background-color: $color-four;
+      color: $color-one;
+    }
+  }
+
+  .text-wrapper {
+    text-align: left;
+    padding: 50px 20px 50px 30px;
+
+    @include media($medium) {
+      padding: 100px 30px 100px 75px;
+      text-align: left;
+    }
+
+    h2 {
+      font-size: 30px;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+      text-transform: capitalize;
+      color: $color-one;
+      line-height: 35px;
+
+      @include media($medium) {
+        font-size: 40px;
+        line-height: 43px;
+      }
+    }
+
+    h4 {
+      font-size: 24px;
+      font-weight: 400;
+      text-transform: capitalize;
+      line-height: 1.2em;
+      margin-bottom: 2rem;
+      @media (max-width: $medium-width) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    h6 {
+      font-weight: 600;
+      font-size: 18px;
+      text-transform: capitalize;
+    }
+
+    ul {
+      padding: 0 0 0 25px;
+      margin: 30px 0 0 0;
+      list-style-type: none;
+      li {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+
+        @include media($medium) {
+          margin-bottom: 25px;
+          padding-left: 20px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &:before {
+          position: absolute;
+          content: '';
+          background: $color-one;
+          width: 15px;
+          height: 15px;
+          left: -20px;
+          border-radius: 50%;
+
+          @include media($medium) {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+
+      li > a {
+        @include media($medium) {
+          font-size: 24px;
+        }
+
+        &:hover {
+          color: $color-five;
+        }
+      }
+    }
+
+    p {
+      font-family: $font-two;
+      font-size: 16px;
+      font-weight: 400;
+      color: $color-one;
+      margin: 0.5em auto 35px;
+      @media (max-width: $medium-width) {
+        margin: 15px auto 15px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        font-size: 16px;
+        font-weight: inherit;
+        color: $color-four;
+        display: inline;
+        text-decoration: none;
+        text-transform: capitalize;
+
+        &:hover {
+          color: $color-five;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .orange-mark-list {
+      padding: 0 0 0 40px;
+      margin: 20px 0 30px;
+      list-style: none;
+      text-align: left;
+
+      @include media($medium) {
+        padding: 0 0 30px 40px;
+        margin: 40px 0 0;
+      }
+
+      li {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 15px;
+        position: relative;
+
+        @include media($medium) {
+          font-size: 18px;
+          margin-bottom: 25px
+        }
+
+        &:before {
+          content: url(../img/orange-check-mark.svg);
+          position: absolute;
+          left: -42px;
+          top: 3px;
+        }
+      }
+    }
+
+    .purple-mark-list {
+      padding: 0 0 0 40px;
+      margin: 20px auto 0;
+      list-style: none;
+      max-width: 100%;
+      text-align: left;
+
+      @include media($medium) {
+        padding: 0 0 30px 40px;
+        margin: 40px 0 0;
+      }
+
+      li {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 15px;
+        position: relative;
+
+        @include media($medium) {
+          font-size: 18px;
+          margin-bottom: 25px
+        }
+
+        &:before {
+          content: url(../img/purple-checkmark.svg);
+          position: absolute;
+          left: -42px;
+          top: 3px;
+        }
+      }
+    }
+
+    .button.purple {
+      display: inline-block;
+      font-size: 17px;
+      font-weight: 700;
+      color: $color-one;
+      text-transform: uppercase;
+      text-decoration: none;
+      width: auto;
+      padding: 12px 20px;
+      margin-top: 30px;
+
+      &:hover {
+        border: 2px solid $color-five;
+        color: $color-five;
+      }
+
+      @include media($medium) {
+        margin-top: 0;
+      }
+    }
+
+    .button.orange {
+      font-size: 17px;
+      font-weight: 700;
+      text-decoration: none;
+      color: $color-one;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $color-four;
+      }
+    }
+  }
+}

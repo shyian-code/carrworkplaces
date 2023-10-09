@@ -1,0 +1,132 @@
+.full-size-map {
+  padding: 50px 0;
+  text-align: center;
+  @include media($medium) {
+    padding: 100px 0;
+  }
+  &__content {
+    text-align: center;
+  }
+
+  &__content-title {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1em;
+    margin-bottom: 25px;
+
+    @include media($medium) {
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+  }
+  &__content-description {
+    font-size: 16px;
+    color: $text-light-one;
+    max-width: 780px;
+    text-align: center;
+    margin: 0 auto 45px;
+  }
+
+  &__link {
+    font-weight: 700;
+    margin-top: 50px;
+  }
+}
+
+.full-screen-image {
+  height: 60vh;
+}
+
+//Custom CSS for map plugin
+.wpgmza_marker_list_class {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  column-gap: 25px;
+  row-gap: 20px;
+  padding-top: 30px;
+  @include media($small) {
+    flex-direction: row;
+  }
+  @include media($medium) {
+    flex-direction: row;
+    column-gap: 45px;
+    row-gap: 40px;
+  }
+
+  .wpgmaps_blist_row {
+    border-bottom: none;
+  }
+
+  .wpgmaps_blist_row.wpgmaps_odd {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include media($small) {
+      width: 30%;
+    }
+    @include media($medium) {
+      width: 22%;
+    }
+  }
+
+  .wpgmaps_blist_row.wpgmaps_even {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include media($small) {
+      width: 30%;
+    }
+    @include media($medium) {
+      width: 22%;
+    }
+  }
+
+  .wpgmza-basic-list-item-wrapper {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+
+    .wpgmza-basic-list-item.wpgmza_div_title {
+      font-size: 18px;
+      color: $text-one;
+      margin: 8px auto;
+      width: 85%;
+
+      @include media($medium) {
+        margin: 12px 0;
+        width: auto;
+      }
+    }
+
+    .wpgmza-basic-list-item.wpgmza_div_address {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.25em;
+      color: $text-light-one;
+
+      @include media($medium) {
+        line-height: 1.75em;
+      }
+    }
+  }
+}
+
+//Background color section
+
+.full-size.white {
+  background-color: $color-one;
+}
+
+.full-size.orange {
+  background-color: $color-four;
+}
+
+.full-size.beige {
+  background-color: $background-four;
+}
+
+.full-size.dark-gray {
+  background-color: $text-four;
+}

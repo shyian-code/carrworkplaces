@@ -1,0 +1,158 @@
+/* Main Nav
+--------------------- */
+.navigation {
+	display: none;
+	@include media($mlarge) {
+		display: block !important;
+	}
+}
+
+.main-nav {
+	width: 100%;
+	text-align: center;
+	padding: 15px 0;
+	@include media($mlarge) {
+		width: auto;
+		float: left;
+		//padding: 35px 0;
+	}
+
+	ul {
+		border-bottom: 1px solid $border-one;
+		@include media($mlarge) {
+			border-bottom: none;
+		}
+	}
+
+	li {
+		cursor: pointer;
+		position: relative;
+		display: block;
+		width: 100%;
+		padding: 0px;
+		border-top: 1px solid $border-one;
+		@include media($mlarge) {
+			display: inline-block;
+			width: auto;
+            border-top: none;
+
+            &:first-child a { margin-left: 40px; }
+		}
+	}
+
+	a {
+		display: block;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 0.02em;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: $text-two;
+		margin: 0;
+		padding: 25px 0;
+		@include media($medium) {
+			font-size: 12px;
+			padding: 10px $pad;
+		}
+		@include media($mlarge) {
+			display: block;
+			margin-left: 30px;
+            padding: 0;
+		}
+
+		&:hover {
+			color: $color-four;
+		}
+	}
+
+	.current-menu-item, .current-page-ancestor {
+		a {
+			color: $color-four;
+		}
+	}
+}
+
+.login-nav {
+	width: 100%;
+	text-align: center;
+	margin-top: 40px;
+	@include media($medium) {
+		margin-top: 0;
+	}
+	@include media($mlarge) {
+		width: auto;
+		float: right;
+		//padding: 25px 20px 16px 0;
+	}
+	@include media($large) {
+		//padding: 25px 100px 16px 0;
+	}
+
+	li {
+		@include media($mlarge) {
+			width: auto;
+			display: inline-block;
+            margin-left: 20px;
+
+            &:first-child { margin-left: 0; }
+		}
+	}
+
+	a {
+		display: block;
+		font-size: 14px;
+		font-weight: 600;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		@include media($medium) {
+			font-size: 12px;
+		}
+		@include media($mlarge) {
+			margin-left: 0;
+            padding: 0;
+		}
+		&:hover {
+			color: $color-four;
+		}
+	}
+
+	.login-link {
+		margin-bottom: 15px;
+		@include media($medium) {
+			margin-bottom: 0;
+		}
+	}
+	.login-link > a {
+		color: $text-one;
+		&:hover {
+			color: $color-four;
+		}
+	}
+	.button {
+		a {
+			width: 100%;
+			margin-left: 0;
+			font-size: 13px;
+			font-weight: 700;
+			@include media($mlarge) {
+                //padding: 10px 30px;
+			}
+		}
+	}
+
+	.button.purple {
+		background: $color-five;
+		border: 2px solid $color-five;
+
+		&:hover {
+			background: transparent;
+			a{
+				color: $color-five;
+			}
+		}
+		a {
+			color: $text-three;
+		}
+	}
+}

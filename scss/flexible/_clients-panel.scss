@@ -1,0 +1,137 @@
+/* Clients
+--------------------- */
+.clients-panel {
+  padding: 50px 0;
+  text-align: center;
+  @include media($tiny) {
+    padding: 50px 0;
+  }
+
+  .gray-filter img {
+    filter: grayscale(1);
+  }
+
+  &__title {
+    font-size: 18px;
+    text-align: left;
+    color: $headline;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    @media (max-width: $medium-width) {
+      text-align: center;
+      line-height: 1.5em;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    // margin: 50px 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @include media($medium) {
+      justify-content: space-between;
+      gap: 50px;
+      flex-wrap: nowrap;
+    }
+  }
+
+  .panel-component {
+    @include media($medium) {
+
+      gap: 50px;
+    }
+
+  }
+
+  &__list-item {
+    width: 40%;
+    opacity: 0.7;
+
+    @include media($medium) {
+      width: 100%;
+    }
+
+    @include media($xsmall) {
+      //width: 9%;
+      opacity: 0.7;
+    }
+
+    img {
+      width: 54%;
+
+      @include media($medium) {
+        width: 100%;
+      }
+    }
+  }
+
+  .button {
+    margin-top: $margin-medium;
+  }
+}
+
+.content-page-default {
+  .cpanel-default {
+    @include media($medium) {
+      padding-top: 140px;
+      padding-bottom: 140px;
+    }
+
+    .cpanel-title
+    .section-header {
+      h2 {
+        font-size: 18px;
+        text-align: left;
+        color: #8F8F8F;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        line-height: 32px;
+        font-weight: 600;
+      }
+    }
+
+    .button {
+      display: inline-block;
+      font-size: 17px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: none;
+      width: auto;
+      border: 2px solid $color-five;
+      background-color: $color-five;
+      padding: 12px 20px;
+      color: $color-one;
+
+      &:hover {
+        background-color: transparent;
+        border: 2px solid $color-five;
+
+        a {
+          color: $color-five;
+
+        }
+      }
+
+    }
+  }
+}
+
+.clients-panel.border-top {
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  margin-top: 25px;
+  padding-top: 50px;
+  @include media($small) {
+    margin-top: 50px;
+    padding-top: 100px;
+  }
+}
+
+.clients-panel.border-none {
+  border-top: none;
+}

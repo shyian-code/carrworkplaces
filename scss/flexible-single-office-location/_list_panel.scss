@@ -1,0 +1,169 @@
+.list-panel {
+  padding: 40px 0 40px;
+
+  @include media($medium) {
+    padding: 60px 0 80px;
+  }
+
+  &__headline-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @include media($medium) {
+      flex-direction: row;
+    }
+  }
+
+  &__title {
+    font-size: 40px;
+    font-weight: 400;
+    color: $text-black;
+    margin-bottom: 25px;
+    max-width: 700px;
+    @include media($medium) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__price-label {
+    font-size: 24px;
+    color: $color-four;
+    margin: 0;
+  }
+
+  &__headline-description {
+    font-size: 16px;
+    font-weight: 400;
+    color: $text-black;
+    line-height: 26px;
+    margin-bottom: 0;
+    margin-top: 25px;
+    max-width: 700px;
+    text-transform: capitalize;
+  }
+
+  &__benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 10%;
+    padding-left: 45px;
+    margin-top: 35px;
+    flex-direction: column;
+    @include media($small) {
+      margin-top: 40px;
+      flex-direction: row;
+    }
+
+    @include media($medium) {
+      column-gap: 12%;
+      margin-top: 55px;
+      flex-direction: row;
+      justify-content: start;
+    }
+  }
+
+  &__benefits-list-item {
+    color: $text-one;
+    text-transform: capitalize;
+    line-height: 1.75;
+    margin-bottom: 15px;
+    width: 100%;
+    list-style: none;
+    position: relative;
+
+    &:before {
+      content: url(../img/purple-checkmark.svg);
+      position: absolute;
+      left: -45px;
+      top: 3px;
+    }
+
+    @include media($small) {
+      line-height: 1.75;
+      width: 40%;
+      margin-bottom: 20px;
+    }
+
+    @include media($medium) {
+      line-height: 1.875;
+      width: 25%;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    @include media($medium) {
+      margin-top: 60px;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__purple-link {
+    margin-right: 25px;
+  }
+
+  &__notice-wrapper {
+    margin-bottom: 30px;
+    @include media($medium) {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin: 15px 30px;
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 400;
+      color: $text-one;
+      text-transform: capitalize;
+
+      @include media($small) {
+        display: flex;
+      }
+      @include media($medium) {
+        display: flex;
+      }
+    }
+
+    a {
+      display: inline-block;
+      font-weight: 400;
+      font-size: inherit;
+      text-decoration: none;
+      text-transform: capitalize;
+      color: $color-four;
+    }
+  }
+}
+
+//Background color section
+
+.list-panel.white {
+  background-color: $color-one;
+
+  .list-panel__notice-wrapper {
+    background-color: $background-four;
+  }
+}
+
+.list-panel.orange {
+  background-color: $color-four;
+}
+
+.list-panel.beige {
+  background-color: $background-four;
+
+  .list-panel__notice-wrapper {
+    background-color: $background-one;
+  }
+}
+
+.list-panel.dark-gray {
+  background-color: $text-one;
+}

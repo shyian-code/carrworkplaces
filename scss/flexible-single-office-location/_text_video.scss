@@ -1,0 +1,162 @@
+.text-video {
+  list-style: none;
+  //max-height: 60vh;
+  padding: 50px 0;
+
+  .l-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media($medium) {
+      flex-direction: row;
+    }
+  }
+
+  .text-block {
+    width: 100%;
+    margin-bottom: 40px;
+
+    @include media($medium) {
+      width: 50%;
+      margin-bottom: 0;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      max-height: 30vh;
+
+      @include media($medium) {
+        max-height: 100%;
+      }
+    }
+
+    a {
+      font-weight: 700;
+      display: inline-block;
+      color: $text-black;
+    }
+  }
+
+  .video-block {
+    width: 100%;
+    @include media($medium) {
+      width: 50%;
+    }
+
+    iframe {
+      width: 100%;
+      min-height: 348px;
+    }
+  }
+
+  .text-wrapper {
+    padding: 0 15px;
+
+    @include media($medium) {
+      padding: 0 50px;
+    }
+
+    h2 {
+      font-size: 30px;
+      line-height: 1.2em;
+      font-weight: 400;
+      margin-bottom: 30px;
+      color: $text-one;
+      @include media($medium) {
+        font-size: 40px;
+      }
+    }
+
+    h4 {
+      font-size: 20px;
+      font-weight: 400;
+      color: $headline;
+      @include media($medium) {
+        font-size: 24px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      color: #666666;
+      margin-bottom: 20px;
+      @include media($medium) {
+        margin-bottom: 35px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+    }
+
+    ul {
+      line-height: 1.5em;
+      margin-bottom: 25px;
+      padding-left: 25px;
+
+      li {
+        color: $text-light-one;
+      }
+    }
+
+    .button.purple {
+      display: inline;
+      font-size: 17px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: none;
+      width: auto;
+      padding: 12px 20px;
+      color: $color-one;
+    }
+  }
+
+  .video-left {
+    order: 1;
+
+    @include media($medium) {
+      order: 2;
+    }
+  }
+
+  .text-right {
+    order: 2;
+
+    @include media($medium) {
+      order: 1;
+    }
+  }
+}
+
+//Background color section
+
+.two-third-image.white {
+  background-color: $color-one;
+}
+
+.two-third-image.orange {
+  background-color: $color-four;
+}
+
+.two-third-image.beige {
+  background-color: $background-four;
+}
+
+.template-single_location-page {
+  .video-text {
+    a {
+      color: $color-four;
+    }
+    h4{
+      font-size: 40px;
+      font-weight: 400;
+      color: #000;
+      margin-bottom: 25px;
+    }
+  }
+}

@@ -1,0 +1,250 @@
+/* Footer Styles
+--------------------- */
+.footer-locations {
+  background-color: $color-one;
+  text-align: left;
+  color: $text-three;
+  padding: 50px 0;
+
+  //@media (max-width: $medium-width) {
+  //  padding-bottom: 20px;
+  //  padding-top: 20px;
+  //}
+
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: left;
+    color: #333333 !important;
+    margin-bottom: 50px;
+    @media (max-width: $medium-width) {
+      text-align: left;
+      line-height: 40px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__column-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: $color-four;
+    text-transform: uppercase;
+    font-weight: 700;
+    @include media($medium) {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    @media (max-width: $medium-width) {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__column-item-title {
+    margin: 20px 0 15px;
+    @media (max-width: $medium-width) {
+      margin: 7px 0 7px;
+    }
+  }
+
+  &__column-item-title a {
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 700;
+    color: #666666;
+    text-transform: uppercase;
+    padding: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .locations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 20px;
+
+    @include media($medium) {
+      row-gap: 0;
+      margin: 0 -12.5px;
+    }
+  }
+
+  .column {
+    width: 44%;
+    text-align: left;
+    padding: 0;
+
+    @include media($medium) {
+      width: 20%;
+      padding: 0 12.5px;
+    }
+
+    @media (max-width: $small-width) {
+      width: 44%;
+    }
+  }
+
+  .location p > a {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+    color: $headline;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding: 0;
+    @media (max-width: $small-width) {
+      margin-bottom: 5px;
+    }
+  }
+
+  a.no-bold {
+    text-decoration: underline;
+    text-transform: capitalize;
+  }
+}
+
+footer {
+  padding: 50px 0;
+  text-align: center;
+  position: relative;
+  background-color: $background-four;
+  color: $text-three;
+  @media (max-width: $small-width) {
+    padding: 35px 0;
+  }
+  @include media($mlarge) {
+    padding: 50px 0;
+    text-align: left;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $text-three;
+  }
+}
+
+.social-nav {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 35px;
+  @include media($medium) {
+    text-align: left;
+  }
+
+  h4 {
+    color: #666666;
+    margin-bottom: 16px;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 15px 0 0;
+  }
+
+  a {
+    padding: 0;
+    font-size: 30px;
+    color: $color-four;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+}
+
+.footer-nav {
+  margin-bottom: 30px;
+
+  li {
+    display: block;
+    margin: 10px 0;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    @include media($medium) {
+      margin: 0 0 0 40px;
+      display: inline-block;
+    }
+  }
+
+  a {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    text-decoration: underline;
+    color: #666666;
+    padding: 0;
+  }
+}
+
+.footer {
+  &__copyright-privacy-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    @include media($medium) {
+      justify-content: center;
+      flex-direction: row;
+    }
+
+    .legal-nav {
+      margin-top: 15px;
+      margin-left: 0px;
+
+      @include media($medium) {
+        margin-top: 0;
+        margin-left: 40px;
+      }
+    }
+  }
+
+  &__copyright {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #ACACAC;
+  }
+}
+
+.legal-nav {
+  li {
+    display: block;
+
+    &:before {
+      display: none;
+      content: '|';
+      margin-right: 10px;
+      @include media($medium) {
+        display: inline-block;
+      }
+    }
+
+    &:first-child {
+      margin-left: 0;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    @include media($medium) {
+      margin-left: 10px;
+      display: inline-block;
+    }
+  }
+
+  a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-decoration: underline;
+    text-transform: capitalize;
+    color: #ACACAC;
+    padding: 0;
+  }
+}

@@ -1,0 +1,61 @@
+.contact-cta {
+  height: 100%;
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 30px;
+    margin: 2rem auto 4rem;
+    background-color: $color-four;
+
+    @include media($medium) {
+      justify-content: center;
+      flex-direction: row;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    color: $color-one;
+    text-align: center;
+
+    @include media($medium) {
+      line-height: 1.75em;
+      text-align: left;
+    }
+    p {
+      display: inline;
+      font-size: 18px;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      color: $color-one;
+      text-align: center;
+      text-transform: initial;
+      .cta-mail {
+        font-weight: 700;
+        display: inline-block;
+        text-decoration: none;
+        text-transform: initial;
+      }
+    }
+  }
+}
+
+//Background color section
+
+//.save-cta.white {
+//  background-color: $color-one;
+//}
+//
+//.save-cta.orange {
+//  background-color: $color-four;
+//}
+//
+//.save-cta.beige {
+//  background-color: $background-four;
+//}
+//
+//.save-cta.dark-gray {
+//  background-color: $text-one;
+//}

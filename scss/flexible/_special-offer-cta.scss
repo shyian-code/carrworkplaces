@@ -1,0 +1,86 @@
+.special-offer-cta {
+  height: 100%;
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding: 25px 20px;
+    margin: 4rem auto;
+    background-color: $color-four;
+
+    @include media($medium) {
+      padding: 15px 40px;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $color-one;
+    text-align: left;
+
+    @include media($medium) {
+      line-height: 1.75em;
+      margin-right: 30px;
+    }
+    h4 {
+      display: inline;
+      text-transform: uppercase;
+      color: $color-one;
+      margin-right: 5px;
+    }
+    p {
+      display: inline;
+      font-size: 18px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+
+  &__button-wrapper {
+    text-align: center;
+    @include media($medium) {
+      display: block;
+      min-width: 200px;
+      text-align: right;
+    }
+  }
+
+  &__link.button {
+    border: 1px solid $color-one;
+    background-color: transparent;
+    color: $color-one;
+    margin-top: 30px;
+    @include media($medium) {
+      margin-top: 0;
+    }
+
+    &:hover {
+      background: $color-one;
+      color: $text-one;
+      opacity: 1;
+    }
+  }
+}
+
+//Background color section
+
+//.save-cta.white {
+//  background-color: $color-one;
+//}
+//
+//.save-cta.orange {
+//  background-color: $color-four;
+//}
+//
+//.save-cta.beige {
+//  background-color: $background-four;
+//}
+//
+//.save-cta.dark-gray {
+//  background-color: $text-one;
+//}

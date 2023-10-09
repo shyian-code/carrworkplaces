@@ -1,0 +1,32 @@
+/* Custom styles for the datepicker */
+
+.ui-datepicker {
+  background-color: #FFF;
+  border: 1px solid #ccc;
+
+  .ui-datepicker-header {
+    border-bottom: 1px solid #ccc;
+    padding: 15px;
+
+    .ui-datepicker-next {
+      float: right;
+    }
+  }
+
+  .ui-datepicker-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & > select {
+      width: 100px;
+    }
+  }
+
+  .ui-datepicker-calendar td,
+  .ui-datepicker-calendar th  {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+}

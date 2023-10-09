@@ -1,0 +1,112 @@
+/*
+ *
+ * Theme.scss should generate a theme.css file in the main theme directory.
+ * Styles.css will contain no actual styles.
+ *
+ * HOWEVER, if after site develpment has completed, styles need to be added quickly
+ * without SASS, then should then be added to style.css, and only there.
+ *
+ */
+
+// Normalize + Boilerplate
+@import "vendor/normalize";
+@import "vendor/boilerplate";
+
+// Bourbon + Neat & Media Query Settings
+@import "vendor/bourbon/bourbon";
+// Media Query Defaults
+@import "base/grid-settings";
+@import "vendor/neat/neat";
+
+// Colors & Type
+@import "base/variables";
+
+// Default Styles
+@import "base/base";
+@import "base/mixins";
+
+// Main Layout
+@import "layout/header";
+@import "layout/nav";
+@import "layout/footer";
+
+// Module Styles
+@import "components/hero";
+@import "components/content-components";
+@import "components/pagination";
+@import "components/ui-datepicker";
+@import "components/timeline";
+
+@import "parts/hero-location";
+
+// Flexible modules Style
+@import "flexible/three_columns_grid";
+@import "flexible/properties-grid";
+@import "flexible/three_columns_grid_info.scss";
+@import "flexible/plans-office_suite-locations-grid";
+@import "flexible/clients-panel";
+@import "flexible/contact_form";
+@import "flexible/milestones";
+@import "flexible/four_columns_text";
+@import "flexible/half-image_half-text";
+@import "flexible/half-text_half-hubspot-form";
+@import "flexible/two-third-of-image";
+@import "flexible/two-third-of-image-slider";
+@import "flexible/team_member_slider";
+@import "flexible/video-text";
+@import "flexible/text_and_text";
+@import "flexible/full-size";
+@import "flexible/gform_full-size";
+@import "flexible/full-screen-image-text";
+@import "flexible/full_size_map";
+@import "flexible/save-cta";
+@import "flexible/learn-about-cta";
+@import "flexible/special-offer-cta";
+@import "flexible/safety-first-cta";
+@import "flexible/moving-banner-text";
+@import "flexible/footer-cta";
+
+// Flexible locations modules Style
+@import "flexible-location/location_text_video";
+@import "flexible-location/virtual_tour";
+@import "flexible-location/location-contact";
+@import "flexible-location/full_size_cta";
+@import "flexible-location/image-slider-information";
+@import "flexible-location/gif_image-information";
+@import "flexible-location/team_members";
+@import "flexible-location/testimonials";
+
+// Flexible Single Office Locations modules Style
+@import "flexible-single-office-location/list_panel";
+@import "flexible-single-office-location/faq_accordion";
+@import "flexible-single-office-location/office_space_locations_list";
+@import "flexible-single-office-location/half-image_half-text";
+@import "flexible-single-office-location/save_cta_text_image";
+@import "flexible-single-office-location/two_third_of_text";
+@import "flexible-single-office-location/two_row_list";
+@import "flexible-single-office-location/full_size_content.scss";
+@import "flexible-single-office-location/three_columns_grid_info.scss";
+@import "flexible-single-office-location/video-text.scss";
+@import "flexible-single-office-location/two_columns_list.scss";
+@import "flexible/properties-grid";
+
+
+// Plugins Styles
+@import "plugins/gravity-form";
+@import "plugins/hubspot-form";
+@import "plugins/ns-slick";
+
+//Career page Styles
+@import "pages/careers";
+@import "pages/careers/core-values";
+@import "pages/careers/jobs_list";
+@import "pages/careers/career-video-text";
+@import "pages/careers/contact-cta";
+@import "pages/careers/career-half-image_half-text";
+
+// General Page Styles
+@import "pages/contact";
+@import "pages/blog";
+@import "pages/single-blog";
+@import "pages/404";
+@import "pages/page-default";

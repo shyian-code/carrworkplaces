@@ -1,0 +1,103 @@
+/* Header Styles
+--------------------- */
+header {
+	width: 100%;
+	position: relative;
+	z-index: 20;
+	//border-top: 8px solid #756C6C;
+	border-bottom: 1px solid $border-one;
+	background-color: #fff;
+	@include transition(box-shadow .15s linear);
+	@include media($mlarge) {
+		position: fixed;
+		top: 0;
+	}
+
+	&.menu-open {
+		background-color: $background-one;
+	}
+
+	.header-wrapper {
+		position: relative;
+	}
+
+	.inner-wrapper {
+		position: relative;
+		z-index: 2;
+		margin: 0 auto;
+		padding: 20px 15px;
+
+		@include media($medium) {
+			max-width: 1440px;
+			padding: 35px 100px;
+		}
+	}
+}
+
+/* Menu Styles
+--------------------- */
+
+.header-spacer {
+	display: none;
+	@include media($mlarge) {
+		display: block;
+		width: 100px;
+		height: 95px;
+	}
+}
+
+.hamburger-menu {
+	position: absolute;
+	top: 26px;
+	right: 14px;
+	cursor: pointer;
+	@include media($mlarge) {
+		display: none;
+	}
+
+	span {
+		display: block;
+		position: relative;
+		width: 23px;
+		height: 2px;
+		margin: 6px;
+		background-color: #919191;
+		@include transition(.25s linear);
+	}
+
+	&.open {
+		top: 26px;
+		right: 14px;
+		.bun.top {
+		  	top: 8px;
+		  	@include transform(rotate(-45deg));
+		}
+
+		.patty {
+		  	background: none !important;
+		}
+
+		.bun.bottom {
+		  	top: -8px;
+		  	@include transform(rotate(45deg));
+		}
+	}
+}
+
+.logo {
+	//padding: 20px 0 20px 0;
+	@include media($mlarge) {
+		float: left;
+	}
+	@include media($large) {
+		//padding: 30px 0 30px 0;
+	}
+
+	a {
+		padding: 0;
+	}
+
+	img {
+		border: none; // TO REMOVE BORDER AROUND LINKED IMAGE IN IE10
+	}
+}

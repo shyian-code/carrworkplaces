@@ -1,0 +1,48 @@
+.gform-full-size {
+  margin: 50px auto 25px;
+  height: 100%;
+
+
+  p {
+    a {
+      display: inline;
+      color: $color-four;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+        color: $color-five;
+      }
+    }
+  }
+}
+
+
+.full-size.mt-50 {
+  margin-top: 25px;
+
+  @include media($medium) {
+    margin-top: 50px;
+  }
+}
+
+.full-size.mb-50 {
+  margin-bottom: 25px;
+
+  @include media($medium) {
+    margin-bottom: 50px;
+  }
+}
+
+.full-size.m-0 {
+  margin: 0 auto;
+}
+
+//Background color section
+
+.full-size.white {
+  background-color: $color-one;
+}
+
+.full-size.beige {
+  background-color: $background-four;
+}

@@ -1,0 +1,92 @@
+.virtual-tour {
+  margin: 50px auto 50px;
+  height: 100%;
+
+  @include media($medium) {
+    margin: 50px auto 100px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: $color-five;
+
+    @include media($medium) {
+      justify-content: space-between;
+      flex-direction: row;
+      padding: 15px 40px 15px 20px;
+    }
+    &-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include media($medium) {
+        flex-direction: row;
+      }
+    }
+  }
+
+  &__icon {
+    margin-right: 0;
+    @include media($medium) {
+      margin-right: 30px;
+    }
+  }
+
+  &__label {
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: capitalize;
+    text-align: center;
+    color: $color-one;
+    max-width: 100%;
+    margin: 15px auto 0;
+
+    @include media($medium) {
+      line-height: 1.75em;
+      text-align: left;
+      margin: 0;
+    }
+  }
+
+  &__link {
+    background-color: transparent;
+    color: $color-one;
+    margin-top: 1.5rem;
+    border: 1px solid;
+    padding: 10px 20px;
+
+    &:hover {
+      color: $color-four;
+      opacity: 1;
+    }
+
+    @include media($medium) {
+      margin-top: 0;
+      border: none;
+      padding: 0;
+    }
+  }
+}
+
+//Background color section
+
+.virtual-tour.white {
+  background-color: $color-one;
+}
+
+.virtual-tour.orange {
+  background-color: $color-four;
+}
+
+.virtual-tour.beige {
+  background-color: $background-four;
+}
+
+.virtual-tour.dark-gray {
+  background-color: $text-one;
+}

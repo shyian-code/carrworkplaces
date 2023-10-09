@@ -1,0 +1,86 @@
+.jobs {
+  padding: 50px 0;
+
+  &__title {
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: capitalize;
+    color: $text-black;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    font-weight: 400;
+    color: $color-four;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 0;
+  }
+}
+
+//Job widget
+#smartWidget0 {
+  .srJobList {
+    border: none;
+    .srJobListTitles {
+      background: $color-five!important;
+      border: none;
+
+      .srJobListJobTitle,
+      .srJobListLocation{
+        font-size: 18px;
+        font-weight: 700;
+        color: $color-one;
+        text-align: left;
+        padding: 30px 40px;
+        border: none;
+      }
+    }
+
+    .srJobListJobOdd,
+    .srJobListJobEven {
+      font-size: 18px;
+      font-weight: 600;
+      color: $text-one;
+      border: none;
+
+      .srJobListJobTitle {
+        padding: 30px 40px;
+        border: none;
+        letter-spacing: 0.06em;
+      }
+
+      .srJobListLocation {
+        padding: 30px 40px;
+        border: none;
+      }
+    }
+  }
+
+  .srJobListJobOdd {
+    background: $background-four;
+  }
+
+  .srJobListJobEven {
+    background:  #E9EDEE;
+  }
+}
+
+#jobs-section #smartWidget0 .srJobList .srJobListJobOdd:hover *,
+#jobs-section #smartWidget0 .srJobList .srJobListJobEven:hover * {
+  background-color: #FC612B !important;
+  color: #fff;
+  cursor: pointer;
+}
+
+//Background color section
+
+.jobs.white {
+  background-color: $color-one;
+}
+
+.jobs.beige {
+  background-color: $background-four;
+}

@@ -1,0 +1,47 @@
+.full-size-text {
+  margin-top: 50px;
+  &__content {
+    padding: 25px 0 35px;
+
+    @include media($medium) {
+      padding: 75px 0 70px;
+    }
+
+    h2 {
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 45px;
+
+      @include media($medium) {
+        font-size: 40px;
+        line-height: 50px;
+      }
+    }
+  }
+}
+
+.full-screen-image {
+  height: 30vh;
+
+  @include media($medium) {
+    height: 60vh;
+  }
+}
+
+//Background color section
+
+.full-size.white {
+  background-color: $color-one;
+}
+
+.full-size.orange {
+  background-color: $color-four;
+}
+
+.full-size.beige {
+  background-color: $background-four;
+}
+
+.full-size.dark-gray {
+  background-color: $text-four;
+}

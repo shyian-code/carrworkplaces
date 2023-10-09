@@ -1,0 +1,19 @@
+/* 404 Styles
+--------------------- */
+.error404 {
+
+	section {
+		padding: 200px $pad;
+		background-repeat: no-repeat;
+		background-position: top 0 right 0;
+		background-size: contain;
+
+		.inner-wrapper {
+			max-width: 690px;
+		}
+	}
+
+	h1 {
+		margin-bottom: 25px;
+	}
+}

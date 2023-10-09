@@ -1,0 +1,229 @@
+.full-size {
+  margin: 50px auto 25px;
+  height: 100%;
+  &__content {
+    padding-top: 2%;
+    padding-bottom: 5px;
+
+    h4 {
+      font-size: 24px;
+      font-weight: 400;
+      margin-top: -10px;
+    }
+    p {
+      font-family: $font-two;
+      font-size: 14px;
+      line-height: 1.6em;
+      color: $text-light-one;
+      letter-spacing: 0.06em;
+
+      @include media($medium) {
+        font-size: 16px;
+      }
+
+      &.p-highlighted {
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        color: $text-one;
+        max-width: 1060px;
+        margin: 0 auto 30px;
+
+        @include media($medium) {
+          font-size: 20px;
+        }
+      }
+
+      a {
+        display: inline-block;
+        font: inherit;
+        text-transform: inherit;
+        color: $color-four;
+        text-decoration: none;
+        &:hover {
+          color: $color-five;
+          text-decoration: underline;
+        }
+      }
+
+      .button.purple {
+        font-weight: 700;
+        color: $color-one;
+        &:hover {
+          color: $color-five;
+          text-decoration: none;
+        }
+      }
+    }
+
+    p {
+      form > fieldset {
+        margin: 0 auto;
+      }
+
+      form {
+        .hs_submit.hs-submit {
+          text-align: center;
+          .actions {
+            text-align: center !important;
+          }
+        }
+      }
+    }
+
+    .orange-mark-list {
+      padding: 0 0 0 40px;
+      margin: 20px 0 30px;
+      list-style: none;
+      text-align: left;
+
+      @include media($medium) {
+        padding: 0 0 30px 40px;
+        margin: 40px 0 0;
+      }
+
+      li {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 15px;
+        position: relative;
+
+        @include media($medium) {
+          font-size: 18px;
+          margin-bottom: 25px
+        }
+
+        &:before {
+          content: url(../img/orange-check-mark.svg);
+          position: absolute;
+          left: -42px;
+          top: 3px;
+        }
+      }
+    }
+
+    .purple-mark-list {
+      padding: 0 0 0 40px;
+      margin: 20px auto 0;
+      list-style: none;
+      max-width: 100%;
+      text-align: left;
+
+      @include media($medium) {
+        padding: 0 0 30px 40px;
+        margin: 40px 0 0;
+      }
+
+      li {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 15px;
+        position: relative;
+
+        @include media($medium) {
+          font-size: 18px;
+          margin-bottom: 25px
+        }
+
+        &:before {
+          content: url(../img/purple-checkmark.svg);
+          position: absolute;
+          left: -42px;
+          top: 3px;
+        }
+      }
+    }
+  }
+
+  &__content-centered {
+    p {
+      margin: 0 auto;
+      max-width: 600px;
+      line-height: 1.6em;
+    }
+  }
+
+  .button {
+    margin: 1.8em 0 0;
+    text-transform: uppercase;
+
+    @include media($medium) {
+      margin: 2em 0 2rem;
+    }
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+    margin-bottom: 15px;
+    @media (max-width: $small-width) {
+      font-size: 32px;
+      line-height: 40px;
+    }
+    @include media($medium) {
+      margin-bottom: 25px;
+    }
+    &.no-padding {
+      padding-top: 0;
+    }
+  }
+
+  .m-0 {
+    margin-bottom: 0;
+  }
+
+  .colored-subtitle {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    max-width: 500px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $color-four;
+    text-align: center;
+    background: $background-four;
+    padding: 8px 30px;
+    margin: 0px auto 15px auto;
+  }
+}
+
+
+.full-size.mt-50 {
+  margin-top: 25px;
+
+  @include media($medium) {
+    margin-top: 50px;
+  }
+}
+
+.full-size.mb-50 {
+  margin-bottom: 25px;
+
+  @include media($medium) {
+    margin-bottom: 50px;
+  }
+}
+
+.full-size.m-0 {
+  margin: 0 auto;
+}
+
+//Background color section
+
+.full-size.white {
+  background-color: $color-one;
+}
+
+.full-size.orange {
+  background-color: $color-four;
+}
+
+.full-size.beige {
+  background-color: $background-four;
+}
+
+.full-size.dark-gray {
+  background-color: $text-four;
+}

@@ -1,0 +1,181 @@
+.career-half-text_half-image {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 70px 70px;
+
+  @include media($medium) {
+    flex-direction: row;
+  }
+
+  .block-one {
+    width: 100%;
+
+    @include media($medium) {
+      width: 50%;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      max-height: 30vh;
+
+      @include media($medium) {
+        max-height: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .image-left {
+    order: 1;
+
+    @include media($medium) {
+      order: 2;
+    }
+  }
+
+  .text-right {
+    order: 2;
+
+    @include media($medium) {
+      order: 1;
+    }
+  }
+
+  .block-two.text-right > .text-wrapper {
+    @include media($medium) {
+      padding-right: 100px;
+    }
+  }
+
+  .block-two.text-left > .text-wrapper {
+    @include media($medium) {
+      padding-left: 50px;
+    }
+  }
+
+  .block-two {
+    width: 100%;
+    justify-self: center;
+
+    @include media($medium) {
+      width: 50%;
+    }
+  }
+
+  .text-wrapper {
+    //padding: 0 15px;
+    margin-bottom: 30px;
+
+    @include media($medium) {
+      //padding-left: 50px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 43px;
+      margin-bottom: 1.5rem;
+      text-transform: capitalize;
+    }
+
+    h4 {
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    h6 {
+      font-weight: 600;
+      font-size: 18px;
+      color: $text-one;
+      line-height: 1.2em;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-family: $font-two;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      color: #666666;
+      margin: 0.5em auto 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .orange-mark-list {
+      padding: 0 0 0 40px;
+      margin: 40px 0 30px;
+      list-style: none;
+
+      li {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 25px;
+        position: relative;
+
+        &:before {
+          content: url(../img/orange-check-mark.svg);
+          position: absolute;
+          left: -42px;
+          top: 3px;
+        }
+      }
+    }
+
+    .purple-mark-list {
+      padding: 0 0 30px 40px;
+      margin: 40px 0 0;
+      list-style: none;
+
+      li {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 25px;
+        position: relative;
+
+        &:before {
+          content: url(../img/purple-checkmark.svg);
+          position: absolute;
+          left: -42px;
+          top: 3px;
+        }
+      }
+    }
+
+    .button.purple {
+      display: inline;
+      font-size: 17px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: none;
+      width: auto;
+      padding: 12px 20px;
+      color: $color-one;
+
+      &:hover {
+        border: 2px solid $color-five;
+        color: $color-five;
+      }
+    }
+  }
+}
+
+.career-half-text_half-image.mt-50 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  @media (max-width: $medium-width) {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}

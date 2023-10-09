@@ -1,0 +1,236 @@
+//Background color section
+
+.save-cta-text-image.white {
+  background-color: $color-one;
+  padding: 50px 0;
+  @media (max-width: $medium-width) {
+    padding: 25px 0;
+  }
+}
+
+.save-cta-text-image.beige {
+  background-color: $background-four;
+}
+
+//Main section CSS
+
+.save-cta-text-image {
+  list-style: none;
+  padding: 50px 0;
+  @media (max-width: $medium-width) {
+    padding: 35px 0;
+  }
+  @include media($medium) {
+    padding: 100px 0;
+  }
+
+  .l-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: $small-width) {
+      text-align: left;
+    }
+    @include media($medium) {
+      flex-direction: row;
+    }
+  }
+
+  .text-block {
+    width: 100%;
+
+    @include media($medium) {
+      width: 50%;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      max-height: 30vh;
+
+      @include media($medium) {
+        max-height: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .text-block.text-right {
+    .text-wrapper {
+      padding-bottom: 30px;
+      padding-right: 0;
+      @include media($medium) {
+        padding-left: 80px;
+        padding-right: 0;
+      }
+    }
+  }
+
+  .image-block {
+    width: 100%;
+    @include media($medium) {
+      width: 50%;
+      max-height: 100%;
+      height: 100%;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      @media (max-width: $small-width) {
+        width: 100%;
+        object-fit: cover;
+        object-position: 49% 31%;
+        //max-height: 50vh;
+      }
+      @include media($medium) {
+        max-height: 100%;
+        height: 100%;
+      }
+    }
+
+    img[alt~="img-app"] {
+      width: 75%;
+      height: auto;
+      object-fit: contain;
+      display: flex;
+      margin: 0 auto;
+
+      @include media($small) {
+        height: 50vh;
+      }
+      @include media($medium) {
+        height: auto;
+      }
+    }
+  }
+
+  .image-block.image-left {
+    .text-wrapper {
+      padding: 30px 0;
+
+      @include media($medium) {
+        padding-left: 50px;
+      }
+    }
+  }
+
+  .text-block {
+    .text-wrapper {
+      padding-bottom: 30px;
+      @include media($medium) {
+        padding-right: 50px;
+      }
+    }
+  }
+
+  .text-wrapper {
+    //padding: 0 15px;
+
+    h2 {
+      font-size: 40px;
+      line-height: 1.2em;
+      font-weight: 400;
+      margin-bottom: 20px;
+      color: $text-black;
+      //max-width: 230px;
+      @media (max-width: $medium-width) {
+        font-size: 35px;
+        margin-bottom: 15px;
+      }
+
+      @media (max-width: $small-width) {
+        font-size: 30px;
+        margin-bottom: 10px;
+        max-width: 100%;
+      }
+
+    }
+
+    h3 {
+      font-size: 18px;
+      line-height: 32px;
+      font-weight: 500;
+    }
+
+    h4 {
+      font-size: 24px;
+      font-weight: 400;
+      color: $headline;
+      line-height: 26px;
+    }
+
+    p {
+      font-family: $font-two;
+      font-size: 16px;
+      line-height: 1.6em;
+      font-weight: 400;
+      color: $text-black;
+      margin-bottom: 30px;
+      @include media($medium) {
+        margin-bottom: 60px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+    }
+
+    ul {
+      line-height: 1.5em;
+      margin-bottom: 25px;
+      padding-left: 25px;
+      @media (max-width: $medium-width) {
+        margin-left: 15px;
+      }
+
+      li {
+        color: $text-light-one;
+        text-align: left;
+      }
+    }
+
+    .button.purple {
+      display: inline-block;
+      font-size: 17px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: none;
+      width: auto;
+      padding: 12px 20px;
+      color: $color-one;
+
+      &:hover {
+        color: $color-five;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .image-left {
+    order: 2;
+
+    @include media($medium) {
+      order: 1;
+    }
+  }
+
+  .text-right {
+    order: 1;
+
+    @include media($medium) {
+      order: 2;
+    }
+  }
+}
+
+//Additional styles
+.template-single_location-page {
+  .save-cta-text-image.white {
+    padding: 80px 0 50px;
+  }
+}
+
